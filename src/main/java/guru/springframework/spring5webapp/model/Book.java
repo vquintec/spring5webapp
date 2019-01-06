@@ -7,22 +7,31 @@ import java.util.Set;
 /**
  * Created by jt on 5/16/17.
  */
+<<<<<<< HEAD
 @Entity
 public class Book {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+=======
+
+public class Book {
+
+>>>>>>> d692953373abdd8be85c2117321dc94ebcf53b74
     private Long id;
     private String title;
     private String isbn;
     private String publisher;
 
+<<<<<<< HEAD
     @ManyToMany
     @JoinTable(
     		name = "author_book",
     		joinColumns = @JoinColumn(name = "book_id"), 
     		inverseJoinColumns = @JoinColumn(name = "author_id")
     		)
+=======
+>>>>>>> d692953373abdd8be85c2117321dc94ebcf53b74
     private Set<Author> authors = new HashSet<>();
 
     public Book() {
@@ -65,7 +74,11 @@ public class Book {
         this.isbn = isbn;
     }
 
+<<<<<<< HEAD
 	public String getPublisher() {
+=======
+    public String getPublisher() {
+>>>>>>> d692953373abdd8be85c2117321dc94ebcf53b74
         return publisher;
     }
 
@@ -80,6 +93,7 @@ public class Book {
     public void setAuthors(Set<Author> authors) {
         this.authors = authors;
     }
+<<<<<<< HEAD
 
     @Override
 	public String toString() {
@@ -111,4 +125,6 @@ public class Book {
 			return false;
 		return true;
 	}
+=======
+>>>>>>> d692953373abdd8be85c2117321dc94ebcf53b74
 }

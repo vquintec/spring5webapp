@@ -8,16 +8,24 @@ import java.util.Set;
  * Created by jt on 5/16/17.
  */
 
+<<<<<<< HEAD
 @Entity
 public class Author {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+=======
+public class Author {
+
+>>>>>>> d692953373abdd8be85c2117321dc94ebcf53b74
     private Long id;
     private String firstName;
     private String lastName;
 
+<<<<<<< HEAD
     @ManyToMany(mappedBy = "authors")
+=======
+>>>>>>> d692953373abdd8be85c2117321dc94ebcf53b74
     private Set<Book> books  = new HashSet<>();
 
     public Author() {
@@ -65,6 +73,7 @@ public class Author {
     public void setBooks(Set<Book> books) {
         this.books = books;
     }
+<<<<<<< HEAD
 
 	@Override
 	public int hashCode() {
@@ -95,4 +104,6 @@ public class Author {
 	public String toString() {
 		return "Author [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", books=" + books + "]";
 	}
+=======
+>>>>>>> d692953373abdd8be85c2117321dc94ebcf53b74
 }
